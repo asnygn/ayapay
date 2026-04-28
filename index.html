@@ -6,7 +6,7 @@
     <title></title>
   </head>
   <body>
-    <a href="#" onclick="openAYAPayWallet()">Open GNext Testing 1</a>
+    <a href="#" onclick="openAYAPayWallet()">Open GNext Testing 3</a>
     <script>
       function getOS() {
         const userAgent = window.navigator.userAgent;
@@ -50,8 +50,6 @@
         window.location.href = deepLink;
 
         setTimeout(() => {
-          // alert("here");
-          alert(document.hidden);
           if (!appOpened && !document.hidden) {
             if (
               devicePlatform === "windows" ||
@@ -68,7 +66,7 @@
         }, 2500);
 
         window.onblur = () => {
-          appOpened = true;
+          // appOpened = true;
         };
       }
     </script>
