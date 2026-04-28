@@ -36,6 +36,10 @@
         return os;
       }
 
+      const isSafari = /^((?!chrome|android).)*safari/i.test(
+        navigator.userAgent,
+      );
+
       function openAYAPayWallet() {
         const deepLink =
           "ayapay://mLink/screen=Biller?id=6902ddd10a5768086a5f2c6c&category=SmartDevices";
@@ -66,7 +70,9 @@
         }, 2500);
 
         window.onblur = () => {
-          // appOpened = true;
+          if (!isSafari) {
+            appOpened = true;
+          }
         };
       }
     </script>
