@@ -50,6 +50,8 @@
         window.location.href = deepLink;
 
         setTimeout(() => {
+          // alert("here");
+          alert(document.hidden);
           if (!appOpened && !document.hidden) {
             if (
               devicePlatform === "windows" ||
